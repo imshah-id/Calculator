@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .contain {
+        display: flex;
+      }
+      main {
+        display: grid;
+        place-self: center;
+        max-width: 600px;
+        max-height: 600px;
+        margin-top: 50px;
+        border: 1px solid black;
+        padding: 6px;
+        border-radius: 3%;
+      }
+      section:first-child {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+      }
+      .num,
+      .ce,
+      .equal {
+        font-size: xx-large;
+        cursor: pointer;
+        padding: 40px;
+      }
+      .operator {
+        font-size: xx-large;
+        cursor: pointer;
+        padding: 28px 30px;
+      }
+      section:last-child {
+        display: flex;
+        margin-left: 4px;
+        gap: 4px;
+        flex-direction: column;
+      }
+      #result {
+        padding: 20px;
+        max-width: 440px;
+
+        text-overflow: ellipsis;
+        text-align: right;
+        font-size: xx-large;
+        margin-bottom: 2px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-radius: 8px;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="result">0</div>
+      <div class="contain">
+        <section id="nums">
+          <button class="num">1</button>
+          <button class="num">2</button>
+          <button class="num">3</button>
+          <button class="num">4</button>
+          <button class="num">5</button>
+          <button class="num">6</button>
+          <button class="num">7</button>
+          <button class="num">8</button>
+          <button class="num">9</button>
+          <button class="num">0</button>
+          <button class="ce">C</button>
+          <button class="equal">=</button>
+        </section>
+        <section id="operators">
+          <button class="operator">+</button>
+          <button class="operator">-</button>
+          <button class="operator">*</button>
+          <button class="operator">/</button>
+          <button class="operator">CE</button>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
